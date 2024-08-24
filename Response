@@ -1,0 +1,10 @@
+[
+    {
+        "supplierId": 1,
+        "companyName": "Example Co.",
+        "website": "http://example.com",
+        "location": "India",
+        "natureOfBusiness": "small_scale",
+        "manufacturingProcesses": ["3d_printing"]
+    }
+]
