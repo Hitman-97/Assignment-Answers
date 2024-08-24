@@ -1,0 +1,37 @@
+# Makersharks Search API
+
+## Getting Started
+
+1. **Clone the repository:**
+    ```sh
+    git clone <repository-url>
+    cd <repository-directory>
+    ```
+
+2. **Build the project:**
+    ```sh
+    ./mvnw clean install
+    ```
+
+3. **Run the application:**
+    ```sh
+    ./mvnw spring-boot:run
+    ```
+
+4. **Access Swagger UI:**
+    Navigate to `http://localhost:8080/swagger-ui.html` to view the API documentation.
+
+## API Endpoints
+
+### POST /api/supplier/query
+
+**Description:** Retrieve a list of manufacturers based on the given criteria.
+
+**Parameters:**
+- `location` (string): Location of the manufacturer.
+- `natureOfBusiness` (string): Nature of business (e.g., small_scale, medium_scale, large_scale).
+- `manufacturingProcess` (string): Manufacturing process capability (e.g., moulding, 3d_printing).
+
+**Request Example:**
+```sh
+curl -X POST "http://localhost:8080/api/supplier/query" -H "Content-Type: application/json" -d '{"location": "India", "natureOfBusiness": "small_scale", "manufacturingProcess": "3d_printing"}'
